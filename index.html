@@ -4,15 +4,24 @@
     <title>ChronoVerse</title>
   </head>
   <body>
-    <h1>Thank you for your maintenance.</h1>
+    <h1>Thank you for your patience.</h1>
     <p>Our ROBLOX Revival, ChronoVerse, is being worked on. If you do not know what this revival is, join our Discord server for more.</p>
     <p>Join our Discord Server: <a href="https://discord.gg/ptSPVbYtN4" target="_blank">https://discord.gg/ptSPVbYtN4</a></p>
     <p>Status: the revival is almost done...</p>
 
-    <!-- Background Music -->
-    <audio autoplay loop controls>
+    <!-- 🎵 Hidden Background Music -->
+    <audio id="bg-music" autoplay loop>
       <source src="music.mp3" type="audio/mpeg">
-      Your browser does not support the audio tag.
     </audio>
+
+    <script>
+      // Try to force autoplay if the browser blocks it
+      document.addEventListener("click", function() {
+        var music = document.getElementById("bg-music");
+        if (music.paused) {
+          music.play();
+        }
+      });
+    </script>
   </body>
 </html>
