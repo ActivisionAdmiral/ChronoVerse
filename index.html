@@ -1,4 +1,34 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cverse.org - Private Test</title>
+</head>
+<body>
+<script>
+  // ===== CONFIG =====
+  const correctPassword = "VerseChrono21$$"; // <-- change this to your desired password
+  const redirectURL = "https://cverse.org/blocked.html"; // optional, or leave as "" to stay on page
+  // ==================
+
+  const userPass = prompt("Enter password to access this site:");
+
+  if(userPass !== correctPassword){
+    alert("Incorrect password! You cannot view this site.");
+    if(redirectURL){
+      window.location = redirectURL;
+    } else {
+      // hide the page content
+      document.body.innerHTML = "<h1>Access Denied</h1>";
+    }
+  }
+</script>
+
+<!-- Your normal site content goes below -->
+<h1>Welcome to Cverse.org!</h1>
+<p>This is your private testing site.</p>
+
+
 <html>
   <head>
     <title>ChronoVerse</title>
