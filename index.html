@@ -1,51 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>ChronoVerse</title>
-  <style>
-    /* Hide content initially */
-    #site-content { display: none; }
-  </style>
+    <title>ChronoVerse</title>
 </head>
 <body>
-<script>
-  // ===== CONFIG =====
-  const correctPassword = "YourSecurePassword"; // <-- change this
-  const userPass = prompt("Enter password to access ChronoVerse:");
+    <h1>Thank you for your patience.</h1>
+    <p>Our ROBLOX Revival, ChronoVerse, is being worked on. If you do not know what this revival is, join our Discord server for more.</p>
+    <p>Join our Discord Server: <a href="https://discord.gg/ptSPVbYtN4" target="_blank">https://discord.gg/ptSPVbYtN4</a></p>
+    <p>Status: the revival is almost done...</p>
 
-  if(userPass === correctPassword){
-    // Show the site content
-    document.addEventListener("DOMContentLoaded", function() {
-      document.getElementById("site-content").style.display = "block";
-    });
-  } else {
-    alert("Incorrect password! You cannot view this site.");
-    // Optionally redirect to another page, or keep blank
-    document.body.innerHTML = "<h1>Access Denied</h1>";
-  }
-</script>
+    <!-- 🎵 Hidden Background Music -->
+    <audio id="bg-music" autoplay loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
 
-<div id="site-content">
-  <h1>Thank you for your patience.</h1>
-  <p>Our ROBLOX Revival, ChronoVerse, is being worked on. If you do not know what this revival is, join our Discord server for more.</p>
-  <p>Join our Discord Server: <a href="https://discord.gg/ptSPVbYtN4" target="_blank">https://discord.gg/ptSPVbYtN4</a></p>
-  <p>Status: the revival is almost done...</p>
-
-  <!-- 🎵 Hidden Background Music -->
-  <audio id="bg-music" autoplay loop>
-    <source src="music.mp3" type="audio/mpeg">
-  </audio>
-
-  <script>
-    // Try to force autoplay if the browser blocks it
-    document.addEventListener("click", function() {
-      var music = document.getElementById("bg-music");
-      if (music.paused) {
-        music.play();
-      }
-    });
-  </script>
-</div>
+    <script>
+        // Try to force autoplay if the browser blocks it
+        document.addEventListener("click", function() {
+            var music = document.getElementById("bg-music");
+            if (music.paused) {
+                music.play();
+            }
+        });
+    </script>
 </body>
 </html>
